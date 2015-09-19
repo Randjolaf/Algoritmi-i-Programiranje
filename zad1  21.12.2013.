@@ -1,0 +1,18 @@
+#include <stdio.h>
+main ()
+{
+	int suma=0, proizvod=1, br, brbr, i;
+	FILE* f;
+	f=fopen("brojevi.txt","r");
+	fscanf(f , "%d" , &brbr);
+	for(i=1; i<=brbr; i++)
+	{
+		fscanf(f , "%d" , &br);
+
+		if(br % 2 == 0)
+		suma += br;
+		else proizvod *= br;
+	}
+	printf("suma=%d\nproizvod=%d", suma, proizvod);
+	f=fclose;
+}
